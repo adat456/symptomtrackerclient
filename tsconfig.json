@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* for circumventing "expect is not defined" https://dev.to/lico/react-vitest-tutorial-set-up-and-test-examples-with-todo-app-519i */
+    "types": ["vitest/globals"]
+  },
+  "include": [
+    "src",
+    /* https://www.npmjs.com/package/@testing-library/jest-dom#with-typescript */
+    "./vitest-setup.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
